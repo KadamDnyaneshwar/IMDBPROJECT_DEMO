@@ -4,10 +4,9 @@ const Sequelize =require("sequelize");
 const sequelize= require("../util/database");
 //const ENUM= require("ENUM");
 const movies = sequelize.define("movies",{
-    id :{
+    Mid :{
         type: Sequelize.INTEGER,
         autoincrement:true,
-        allowNULL:false,
         primaryKey:true,
         
     },
@@ -16,11 +15,11 @@ const movies = sequelize.define("movies",{
         allowNULL:false,
     },
 
-Type:{
-    type: Sequelize.ENUM('movie','Webserise'),
-    default:'movie',    
-    allowNULL:false,
-},
+    Type:{
+        type: Sequelize.ENUM('movie','Webserise','TVshow'),
+        default:'movie',    
+        allowNULL:false,
+    },
 
    
 });
